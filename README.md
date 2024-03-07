@@ -4,9 +4,9 @@
 
 In the US court systems, the average compensation for a life lost in a general aviation accident is $5.2 million dollars, the highest in the world! Testing:1
 This project presents analysis of past aviation accidents based on how the aircraft was built. Our team reviews and processes the data to generate insights for Jelly Co. and ultimately provides airplane purchasing reccomendations.
-1Article written by Healy-Pratt and Hanna in 2021 
+1([Article](https://www.keystonelaw.com/keynotes/how-is-compensation-calculated-after-an-aviation-accident)) written by Healy-Pratt and Hanna in 2021 
 ![image](https://storage.googleapis.com/mcp_acc_236blog/uploads/2014/11/018067-vroeg-II1.jpg)
-Photo by Andres Bolkenbaas on (https://blog.klm.com/6-tips-for-creative-aviation-photography/)
+Photo by ([Andres Bolkenbaas](https://blog.klm.com/6-tips-for-creative-aviation-photography/))
 ## Business Problem
 Jelly Co. is expanding it's business to new industries. They asked our team to look into the data for airplane accidents1 within the US in the last twenty-odd years. The company wants to know:
 
