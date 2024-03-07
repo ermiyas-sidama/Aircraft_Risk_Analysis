@@ -34,9 +34,9 @@ In this project:
 The method applied to solve our business problem is simply by following data science procedures. The first step is data cleaning.
 Data cleaning includes:
 
-      - Removing duplicates in this dataset, there were 1390 records duplicated.
-      - Dropping some columns which are not relevant to our business problems.
-      - Some imputation technique is also used.
+  - Removing duplicates in this dataset, there were 1390 records duplicated.
+  - Dropping some columns which are not relevant to our business problems.
+  - Some imputation technique is also used.
 
 After cleaning the data the master ([dataset](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/blob/main/data/aviation_data_cleaned.csv)) was created and used to make an analysis using Python and Tableau.
 ## Data Analysis Result
