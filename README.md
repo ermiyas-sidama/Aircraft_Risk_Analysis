@@ -224,7 +224,7 @@ Analyze data for private airplanes that have the least amount of accidents.
 
    * We chose 1.0 engine as per the data in the bar graph "Airplanes with the Reciprocating type of engine had the most amount of accidents" and the data from "Num_of_engines_and_Engine_type".
 
-   * We focused on data from Beech, Cessna, Bombardier Inc, and Gulfstream Aerospace because they are among the top 10 largest private aircraft manufacturers according to the [article] https://www.aerotime.aero/articles/top-10-most-popular-private-jet-models-of-2023 written by Rosita Mickeviciute in 2023.
+   * We focused on data from Beech, Cessna, Bombardier Inc, and Gulfstream Aerospace because they are among the top 10 largest private aircraft manufacturers according to the ([article] (https://www.aerotime.aero/articles/top-10-most-popular-private-jet-models-of-2023)) written by Rosita Mickeviciute in 2023.
 Make a comment about Beech being under another company.
 
 Num_of_engines_and_Engine_type = unique_df[['Number.of.Engines', 'Engine.Type']].value_counts()
