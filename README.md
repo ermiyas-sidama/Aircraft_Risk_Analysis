@@ -31,10 +31,9 @@ For this project a ([dataset](https://www.kaggle.com/datasets/khsamaha/aviation-
   3.Selected incidents in the United States and international waters
 ```
 In this project:
-```
-     * Pyhton 3 is used to clean up data, to impute , to make analysis and visualization.
-     * Tableau is used to make our dashboard.
-```
+     *Pyhton 3 is used to clean up data, to impute , to make analysis and visualization.
+     *Tableau is used to make our dashboard.
+
 ## Methods
 The method applied to solve our bussines problem is just by following data science procedures. And the first step is data cleaning.
 Data cleaning include:
