@@ -23,30 +23,29 @@ Here we are using the ([definition](https://www.faa.gov/faq/what-constitutes-pos
 ## Data and Resource Used
 For this project a ([dataset](https://www.kaggle.com/datasets/khsamaha/aviation-accident-database-synopses)) was taken from the National Transportation Safety Board that includes:
 
-  1.Aviation accident data from 1962 to 2023
-  2.Civil aviation accidents
-  3.Selected incidents in the United States and international waters
+  - Aviation accident data from 1962 to 2023
+  - Civil aviation accidents
+  - Selected incidents in the United States and international waters
 
 In this project:
-  1.Pyhton 3 is used to clean up data, to impute , to make analysis and visualization.
-  2.Tableau is used to make our dashboard.
+  - Python 3 is used to clean up data, to impute , to make analysis, and visualizations.
+  - Tableau is used to make our dashboard.
 ## Methods
-The method applied to solve our bussines problem is just by following data science procedures. And the first step is data cleaning.
-Data cleaning include:
-```
-      Removing duplicates in this dataset there was 1390 records duplicate.
-      Dropping some columns which are not relevant to our business problems.
-      Some imputation technique is also used.
-```
-After cleaning the data. The master dataset was created. And used to make analysis using Python and Tableau.
+The method applied to solve our business problem is simply by following data science procedures. The first step is data cleaning.
+Data cleaning includes:
+
+      - Removing duplicates in this dataset, there were 1390 records duplicated.
+      - Dropping some columns which are not relevant to our business problems.
+      - Some imputation technique is also used.
+
+After cleaning the data the master ([dataset](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/blob/main/data/aviation_data_cleaned.csv)) was created and used to make an analysis using Python and Tableau.
 ## Data Analysis Result
 Our analysis shows that:
-```
-       Aircraft engine number is correlated to total accident record
-       Aircraft with asingle engine has the highest accident
-       Aircraft with recprocating type of engine has the highest accident.
-       The most accidents occurred during the landing phase of flight.
-```      
+
+      - Aircraft engine number is correlated to total accident record.
+      - Aircraft with a single engine has the highest accident record.
+      - Aircraft with recprocating type of engine has the highest accident.
+      - The most accidents occurred during the landing phase of flight.
 ## Airplanes with a minimum of 2 engines had the least amount of accidents
 
 ![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/4dcf86d3-0460-448b-912f-56d55f7f2e04)
@@ -63,30 +62,40 @@ Our analysis shows that:
 ## Reccomendations
 ### For Commercial Airplanes
 Aircraft with the least amount of accidents had 3 or more engines and their engine type is not reciprocating and had no landing accident record we set this as a minimum requirement. 
-Based on this requirement we checked top aircraft manufacturers (i.e., Boeing and Airbus) that essentially dominate the commercial airline industry and perform risk analysis and we 
+Based on this requirement we checked ([top aircraft manufacturers](https://www.aerotime.aero/articles/top-10-largest-aircraft-manufacturers-in-the-world)) (i.e., Boeing and Airbus) that essentially dominate the commercial airline industry and perform risk analysis and we 
 foundout that Airbus industries has less amount of accident record. As a result we recommended the following model for commercial airlines.
-```
-  1. Make: Airbus
-  2. Number of Engines: 4.0
-```
+  - Make: Airbus
+  - Number of Engines: 4.0
+
 ### For Private Airplanes
-We did the same analysis for private airlines and recommended the following model.
-```
-  1. Make: Make: Gulfstream Aerospace
-  2. Number of Engines: 2.0
-```
+We did the same analysis for private airlines and recommended the following model. Here are the ([top 10 private airplanes](https://www.aerotime.aero/articles/top-10-most-popular-private-jet-models-of-2023))
+
+  - Make: Make: Gulfstream Aerospace
+  - Number of Engines: 2.0
+### Purchasing Recommendation For Both Airplanes:
+  - Advanced landing assistance features
+
 ## Future Investigations
-```
-1.Understand Jelly Co.’s aircraft selection requirements (e.g., passenger capacity and minimum mileage) to provide model recommendations
-2.Request financial data to conduct financial metric analysis to recommend the most cost effective airplane model 
-3.Follow up with Jelly for any additional analysis to support the successful launch of the commercial and private/business airlines
-```
+
+- Understand Jelly Co.’s aircraft selection requirements (e.g., passenger capacity and minimum mileage) to provide model recommendations
+- Request financial data to conduct financial metric analysis to recommend the most cost effective airplane model 
+- Follow up with Jelly for any additional analysis to support the successful launch of the commercial and private/business airlines
+
 ## For More Information
 Please review our full analysis in jupyter notebook ([Aircraft_Purchasing_Decision_Analysis](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/blob/main/Aircraft_Purchasing_Decision_Analysis.ipynb))
-And also refer our pdf file ([Presentation](https://docs.google.com/presentation/d/1jL-KFUmxIiucP_slylAH3MVa7dCOrDrfDK0MjUmDY54/edit#slide=id.g2c02bb49743_0_21))
-Tableau Dash board ([Tableau Private Airline](https://public.tableau.com/app/profile/sangwon.shim/viz/AircraftManufacturerSelectionDashboardforPrivateAirline/AircraftSelection-Private?publish=yes))
+And also refer to our 
+- ([Presentation](https://docs.google.com/presentation/d/1jL-KFUmxIiucP_slylAH3MVa7dCOrDrfDK0MjUmDY54/edit#slide=id.g2c02bb49743_0_21)) 
+- Tableau Dash board ([Tableau Private Airline](https://public.tableau.com/app/profile/sangwon.shim/viz/AircraftManufacturerSelectionDashboardforPrivateAirline/AircraftSelection-Private?publish=yes))
                    ([Tableau Commercial Airlines](https://public.tableau.com/app/profile/sangwon.shim/viz/AircraftManufacturerSelectionDashboardforCommercialAirline/AircraftSelection-Commercial?publish=yes))
-
+  
+## Repository Structure
+```
+|— README.md
+|— Aircraft_Purchasing_Decision_Analysis.ipynb
+|— .gitignore
+|— Data
+|— Presentation_slide.pdf
+```
 
 
 
