@@ -47,7 +47,7 @@ df.head()
 Overall steps for this section:
 ```
   1.Checking for duplicates and dropping them if there are
-  2.filter
+  2.Filter the raw data
 ```
 Checking for dupliactes
   ```python
@@ -55,6 +55,7 @@ Checking for dupliactes
 
 print(df.duplicated().sum())
 ```
+ ```python
 ## Drop the number of duplicates in the dataset
 
 unique_df = df.drop_duplicates(ignore_index=False)
@@ -63,6 +64,214 @@ unique_df = df.drop_duplicates(ignore_index=False)
 ## Verify duplicates were dropped by printing the number of duplicates in the dataset
 
 print(unique_df.duplicated().sum())
+```
+Filter out the rows where the values in the Aircraft.Category and Purpose.of.flight columns are not in the specified lists Aircraft_categories and Flight_purpose.
+
+Justifications for filtering raw data:
+
+  * Jelly Co. company is interested in Accidents over Incidents because Incidents is concerned with the operation of the aircraft whereas Accidents is concerned with the operation of the aircraft as well as the safety of the passengers as defined by the Federal Aviation 
+  * Administration and the National Transportation Safety Board.
+  * Our company is interested in flights within the United States.
+  * Our company is interested in the data after the new safety regulations were set in place by TSA in November 2001.
+  * Our company is interested in purchasing only airplanes.
+  * Our company is interested in Purpose of flight data that is related to commercial and private airplanes.
+ ```python
+## Filter dataset for Investigation Type, Country, Event Date, Aircraft category, and Purpose of flight
+
+
+Aircraft_categories = ['Helicopter', 'Glider', 'Balloon', 'Gyrocraft', 'Weight-Shift', 'Powered Parachute', 
+                       'Ultralight', 'WSFT', 'Powered-Lift', 'Blimp', 'ULTR', 'Rocket']
+Flight_purpose = ['Instructional', 'Aerial Application', 'Positioning', 'Ferry', 'Aerial Observation', 
+                  'Flight Test', 'Skydiving', 'External Load', 'Banner Tow', 'Air Race show', 'Air Race/show', 
+                  'Glider Tow', 'Firefighting', 'Air Drop', 'ASHO']
+
+unique_df = unique_df.loc[(unique_df['Investigation.Type'] == 'Accident') 
+                    & (unique_df['Country'] == 'United States')
+                    & (unique_df['Event.Date'] > '2001-11-01')
+                    & (unique_df['Aircraft.Category'] != (unique_df['Aircraft.Category'].isin(Aircraft_categories)))
+                    & (unique_df['Purpose.of.flight'] != (unique_df['Purpose.of.flight'].isin(Flight_purpose)))
+                    ]
+
+```
+ ```python
+## Look at columns relevant to business problem and clean if necessary
+
+unique_df['Make'].value_counts()
+```
+Remove missing values from the Make column
+ ```python
+unique_df = unique_df.dropna(subset=['Make'])
+```
+Further clean this data by standardizing the capitalization of the string objects in each element of the Make column.
+ ```python
+unique_df['Make'] = unique_df['Make'].str.title()
+unique_df['Make'].value_counts()
+```
+ ```python
+## Continue to clean data in Make Column
+
+unique_df['Make'].replace(to_replace = ['Saab-Scania', 'Saab'], value = 'Saab-Scania Ab (Saab)', inplace = True)
+unique_df['Make'].replace(to_replace = ['Embraer'], value = 'Embraer S A', inplace = True)
+unique_df['Make'].replace(to_replace = ['Airbus'], value = 'Airbus Industrie', inplace = True)
+unique_df['Make'].replace(to_replace = ['Bombardier', 'Bombardier, Inc.'], value = 'Bombardier Inc', inplace = True)
+unique_df['Make'].replace(to_replace = ['Mcdonnell Douglas', 'Douglas', 'Mcdonnell Douglas Corporation'], value = 'Mcdonnell Douglas Aircraft Co', inplace = True)
+unique_df['Make'].replace(to_replace = ['Beechcraft'], value = 'Beech', inplace = True)
+unique_df['Make'].replace(to_replace = ['Gulfstream'], value = 'Gulfstream Aerospace', inplace = True)
+unique_df['Make'].replace(to_replace = ['Embraer-Empresa Brasileira De'], value = 'Embraer S A', inplace = True)
+unique_df['Purpose.of.flight'].replace(to_replace = ['PUBS'], value = 'Public Aircraft - State', inplace = True)
+unique_df['Purpose.of.flight'].replace(to_replace = ['PUBL'], value = 'Public Aircraft - Local', inplace = True)
+```
+ ```python
+## Choose which columns to keep in order to answer the business question
+
+unique_df.info()
+```
+Give reasoning for dropping columns
+ ```python
+## Drop the columns that aren't relevant to the business question
+
+dropped_columns = ['Injury.Severity', 'Registration.Number', 'Amateur.Built', 'FAR.Description', 
+                   'Schedule', 'Air.carrier', 'Weather.Condition', 'Report.Status', 'Publication.Date', 
+                   'Total.Fatal.Injuries', 'Total.Serious.Injuries', 'Total.Minor.Injuries', 'Total.Uninjured', 
+                   'Latitude', 'Longitude', 'Airport.Code', 'Airport.Name']
+
+for column in dropped_columns:
+    unique_df = unique_df.drop(column, axis=1)
+    
+unique_df.head()
+```
+## Data Visualization
+Create visuals that compare:
+  * The number of engines to the total accident count
+  * The engine type to the total accident count
+  * The broad phase of flight to the total accident count
+Reiterate title aka takeaway
+ ```python
+unique_df['Number.of.Engines'].value_counts().sort_index()
+
+## Plotting data
+
+fig, ax = plt.subplots(figsize=(10,5))
+
+x = unique_df['Number.of.Engines'].value_counts().index
+y = unique_df['Number.of.Engines'].value_counts().values
+
+ax.bar(x,y)
+ax.set_title('Airplanes with a Minimum of 2 Engines had the Least Amount of Accidents')
+ax.set_xlabel('Number of Engines')
+ax.set_ylabel('Total Accident Count');
+```
+Reiterate title aka takeaway
+ ```python
+fig, ax = plt.subplots(figsize=(15,5))
+x = unique_df['Engine.Type'].value_counts().index
+y = unique_df['Engine.Type'].value_counts().values
+ax.bar(x,y)
+ax.set_title('Airplanes with the Reciprocating Type of Engine had the Most Amount of Accidents')
+ax.set_xlabel('Engine Type')
+
+ax.set_ylabel('Total Accident Count');
+```
+Reiterate title aka takeaway
+ ```python
+fig, ax = plt.subplots(figsize=(17,5))
+
+x = unique_df['Broad.phase.of.flight'].value_counts().index
+y = unique_df['Broad.phase.of.flight'].value_counts().values
+
+ax.bar(x,y)
+ax.set_title('The Most Accidents Occurred During the Landing Phase of Flight')
+ax.set_xlabel('Broad Phase of Flight')
+ax.set_ylabel('Total Accident Count');
+```
+## Data Analysis
+### Commmercial Airlines
+Analyze data for commcercial airplanes that have the least amount of accidents.
+
+   * We chose 2.0 engines as per the data in the bar graph "Airplanes with a minimum of 3 engines had the least amount of accidents".
+
+   * We focused on data from Boeing and Airbus because they are among the top 10 largest commercial aircraft manufacturers according to the article written by Rosita Mickeviciute in 2023.
+ ```python
+filtered_public_df = unique_df.loc[(unique_df['Number.of.Engines'] > 2.0)
+           & (unique_df['Engine.Type'] != 'Reciprocating')
+           & (unique_df['Purpose.of.flight'] != 'Personal')
+           & (unique_df['Purpose.of.flight'] != 'Business')
+           & (unique_df['Purpose.of.flight'] != 'Other Work Use')
+           & (unique_df['Purpose.of.flight'] != 'Executive/corporate')
+           & (unique_df['Broad.phase.of.flight'] != 'Landing')
+           ]
+```
+ ```python
+final_public_df = filtered_public_df.loc[(filtered_public_df['Make'] == 'Boeing')
+                       |(filtered_public_df['Make'] == 'Airbus Industrie')
+                        ]
+```
+ ```python
+final_public_df[['Make', 'Number.of.Engines']].value_counts().head(50)
+```
+### Private Airlines
+
+Analyze data for private airplanes that have the least amount of accidents.
+
+   * Investigate if there is a correalation between number of engines and engine type
+
+   * We chose 1.0 engine as per the data in the bar graph "Airplanes with the Reciprocating type of engine had the most amount of accidents" and the data from "Num_of_engines_and_Engine_type".
+
+   * We focused on data from Beech, Cessna, Bombardier Inc, and Gulfstream Aerospace because they are among the top 10 largest private aircraft manufacturers according to the [article] https://www.aerotime.aero/articles/top-10-most-popular-private-jet-models-of-2023 written by Rosita Mickeviciute in 2023.
+Make a comment about Beech being under another company.
+
+Num_of_engines_and_Engine_type = unique_df[['Number.of.Engines', 'Engine.Type']].value_counts()
+Num_of_engines_and_Engine_type
+ ```python
+## Airplanes that used Reciproating engine types and ran on single engines 
+## had the most amount of accidents
+```
+ ```python
+filtered_private_df = unique_df.loc[(unique_df['Number.of.Engines'] > 1.0)
+           & (unique_df['Engine.Type'] != 'Reciprocating')
+           & (unique_df['Purpose.of.flight'] != 'Public Aircraft')
+           & (unique_df['Purpose.of.flight'] != 'Public Aircraft - Federal')
+           & (unique_df['Purpose.of.flight'] != 'Public Aircraft - State')
+           & (unique_df['Purpose.of.flight'] != 'Public Aircraft - Local')
+           & (unique_df['Broad.phase.of.flight'] != 'Landing')
+           ]
+```
+ ```python
+final_private_df = filtered_private_df.loc[(filtered_private_df['Make'] == 'Cessna')
+                       |(filtered_private_df['Make'] == 'Bombardier Inc')
+                       |(filtered_private_df['Make'] == 'Gulfstream Aerospace')
+                        ]
+
+## bring back Beech
+```
+ ```python
+final_private_df[['Make', 'Number.of.Engines']].value_counts()
+```
+## Reccomendations
+### For Commercial Airplanes
+```
+  1. Make: Airbus
+  2. Number of Engines: 4.0
+```
+### For Private Airplanes
+```
+  1. Make: Make: Gulfstream Aerospace
+  2. Number of Engines: 2.0
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
