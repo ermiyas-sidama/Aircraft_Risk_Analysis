@@ -30,24 +30,28 @@ For this project a ([dataset](https://www.kaggle.com/datasets/khsamaha/aviation-
   2.Civil aviation accidents
   3.Selected incidents in the United States and international waters
 ```
+```
 In this project:
-     *Pyhton 3 is used to clean up data, to impute , to make analysis and visualization.
-     *Tableau is used to make our dashboard.
-
+      1.Pyhton 3 is used to clean up data, to impute , to make analysis and visualization.
+      2.Tableau is used to make our dashboard.
+```
 ## Methods
 The method applied to solve our bussines problem is just by following data science procedures. And the first step is data cleaning.
 Data cleaning include:
-      * Removing duplicates in this dataset there was 1390 records duplicate.
-      * Dropping some columns which are not relevant to our business problems.
-      * Some imputation technique is also used.
+```
+      Removing duplicates in this dataset there was 1390 records duplicate.
+      Dropping some columns which are not relevant to our business problems.
+      Some imputation technique is also used.
+```
 After cleaning the data. The master dataset was created. And used to make analysis using Python and Tableau.
 ## Data Analysis Result
 Our analysis shows that:
-      * Aircraft engine number is correlated to total accident record
-      * Aircraft with asingle engine has the highest accident
-      * Aircraft with recprocating type of engine has the highest accident.
-      * The most accidents occurred during the landing phase of flight.
-      
+```
+       Aircraft engine number is correlated to total accident record
+       Aircraft with asingle engine has the highest accident
+       Aircraft with recprocating type of engine has the highest accident.
+       The most accidents occurred during the landing phase of flight.
+```      
 ## Airplanes with a minimum of 2 engines had the least amount of accidents
 
 ![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/4dcf86d3-0460-448b-912f-56d55f7f2e04)
@@ -76,6 +80,16 @@ We did the same analysis for private airlines and recommended the following mode
   1. Make: Make: Gulfstream Aerospace
   2. Number of Engines: 2.0
 ```
+## Future Investigations
+```
+1.Understand Jelly Co.’s aircraft selection requirements (e.g., passenger capacity and minimum mileage) to provide model recommendations
+2.Request financial data to conduct financial metric analysis to recommend the most cost effective airplane model 
+3.Follow up with Jelly for any additional analysis to support the successful launch of the commercial and private/business airlines
+```
+## For More Information
+Please review our full analysis in ([Aircraft_Purchasing_Decision_Analysis](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/blob/main/Aircraft_Purchasing_Decision_Analysis.ipynb))
+And our ([Presentation](https://docs.google.com/presentation/d/1jL-KFUmxIiucP_slylAH3MVa7dCOrDrfDK0MjUmDY54/edit#slide=id.g2c02bb49743_0_21))
+
 
 
 
