@@ -31,8 +31,10 @@ For this project a ([dataset](https://www.kaggle.com/datasets/khsamaha/aviation-
   3.Selected incidents in the United States and international waters
 ```
 In this project:
+```
      * Pyhton 3 is used to clean up data, to impute , to make analysis and visualization.
      * Tableau is used to make our dashboard.
+```
 ## Methods
 The method applied to solve our bussines problem is just by following data science procedures. And the first step is data cleaning.
 Data cleaning include:
@@ -48,23 +50,29 @@ Our analysis shows that:
       * The most accidents occurred during the landing phase of flight.
       
 ## Airplanes with a minimum of 2 engines had the least amount of accidents
-![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/91382f04-d84f-4420-8195-d6b4aaf62c0e)
+
+![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/4dcf86d3-0460-448b-912f-56d55f7f2e04)
 
 ## Airplanes with the recprocating type of engine had the most amount of accidents
 
-![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/5979a273-132d-4325-9fce-495778200963)
+![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/857f30f2-f43c-4e0f-9301-0a6dbf02bfd7)
 
 ## The most accidents occurred during the landing phase of flight
+
 ![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/90768e02-b564-459f-94de-6f1004228c62)
 
 
 ## Reccomendations
 ### For Commercial Airplanes
+Aircraft with the least amount of accidents had 3 or more engines and their engine type is not reciprocating and had no landing accident record we set this as a minimum requirement. 
+Based on this requirement we checked top aircraft manufacturers (i.e., Boeing and Airbus) that essentially dominate the commercial airline industry and perform risk analysis and we 
+foundout that Airbus industries has less amount of accident record. As a result we recommended the following model for commercial airlines.
 ```
   1. Make: Airbus
   2. Number of Engines: 4.0
 ```
 ### For Private Airplanes
+We did the same analysis for private airlines and recommended the following model.
 ```
   1. Make: Make: Gulfstream Aerospace
   2. Number of Engines: 2.0
