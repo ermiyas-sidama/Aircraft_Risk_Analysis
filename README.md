@@ -12,7 +12,8 @@ This project presents analysis of past aviation accidents based on how the aircr
 Photo by ([Andres Bolkenbaas](https://blog.klm.com/6-tips-for-creative-aviation-photography/))
 
 ## Business Problem
-Jelly Co. is expanding it's business to new industries. They asked our team to look into the data for airplane accidents1 within the US in the last twenty-odd years. The company wants to know:
+Jelly Co. is expanding it's business to new industries. They asked our team to look into the data for airplane accidents1 within the US in the last twenty-odd years. 
+The company wants to know:
 
 ```
   1.Which airplane feature helps assess the lowest possible risk to the company?
