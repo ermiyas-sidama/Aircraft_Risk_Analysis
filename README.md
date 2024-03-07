@@ -14,12 +14,9 @@ Photo by ([Andres Bolkenbaas](https://blog.klm.com/6-tips-for-creative-aviation-
 ## Business Problem
 Jelly Co. is expanding it's business to new industries. They asked our team to look into the data for airplane accidents1 within the US in the last twenty-odd years. 
 The company wants to know:
-
-```
-  1.Which airplane feature helps assess the lowest possible risk to the company?
-  2.Which airplane manufacturer should be purchased and operated for a commercial enterprise?
-  3.Which airplane manufacturer should be purchased and operated for a private enterprise?
-```
+  - Which airplane feature helps assess the lowest possible risk to the company?
+  - Which airplane manufacturer should be purchased and operated for a commercial enterprise?
+  - Which airplane manufacturer should be purchased and operated for a private enterprise?
 Here we are using the ([definition](https://www.faa.gov/faq/what-constitutes-post-accident-test-what-definition-accident#:~:text=The%20FAA%20and%20the%20National,any%20person%20suffers%20death%20or)) of accident: "an occurrence associated with the operation of an aircraft which takes place between the time any person boards the aircraft with the intention of flight and all such persons have disembarked, AND in which any person suffers death or serious injury or in which the aircraft receives substantial damage"
 
 ## Data and Resource Used
