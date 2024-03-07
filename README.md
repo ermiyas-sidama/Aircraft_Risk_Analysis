@@ -17,21 +17,19 @@ The company wants to know:
   - Which airplane feature helps assess the lowest possible risk to the company?
   - Which airplane manufacturer should be purchased and operated for a commercial enterprise?
   - Which airplane manufacturer should be purchased and operated for a private enterprise?
+
 Here we are using the ([definition](https://www.faa.gov/faq/what-constitutes-post-accident-test-what-definition-accident#:~:text=The%20FAA%20and%20the%20National,any%20person%20suffers%20death%20or)) of accident: "an occurrence associated with the operation of an aircraft which takes place between the time any person boards the aircraft with the intention of flight and all such persons have disembarked, AND in which any person suffers death or serious injury or in which the aircraft receives substantial damage"
 
 ## Data and Resource Used
 For this project a ([dataset](https://www.kaggle.com/datasets/khsamaha/aviation-accident-database-synopses)) was taken from the National Transportation Safety Board that includes:
 
-```
   1.Aviation accident data from 1962 to 2023
   2.Civil aviation accidents
   3.Selected incidents in the United States and international waters
-```
-```
+
 In this project:
-      1.Pyhton 3 is used to clean up data, to impute , to make analysis and visualization.
-      2.Tableau is used to make our dashboard.
-```
+  1.Pyhton 3 is used to clean up data, to impute , to make analysis and visualization.
+  2.Tableau is used to make our dashboard.
 ## Methods
 The method applied to solve our bussines problem is just by following data science procedures. And the first step is data cleaning.
 Data cleaning include:
