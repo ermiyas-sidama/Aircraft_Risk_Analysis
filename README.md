@@ -19,7 +19,7 @@ The company wants to know:
   - Which airplane manufacturer should be purchased and operated for a commercial enterprise?
   - Which airplane manufacturer should be purchased and operated for a private enterprise?
 
-Here we are using the ([definition](https://www.faa.gov/faq/what-constitutes-post-accident-test-what-definition-accident#:~:text=The%20FAA%20and%20the%20National,any%20person%20suffers%20death%20or)) of accident: "an occurrence associated with the operation of an aircraft which takes place between the time any person boards the aircraft with the intention of flight and all such persons have disembarked, AND in which any person suffers death or serious injury or in which the aircraft receives substantial damage"
+Here we are using the 1([definition](https://www.faa.gov/faq/what-constitutes-post-accident-test-what-definition-accident#:~:text=The%20FAA%20and%20the%20National,any%20person%20suffers%20death%20or)) of accident: "an occurrence associated with the operation of an aircraft which takes place between the time any person boards the aircraft with the intention of flight and all such persons have disembarked, AND in which any person suffers death or serious injury or in which the aircraft receives substantial damage"
 
 ## Data and Resource Used
 For this project a ([dataset](https://www.kaggle.com/datasets/khsamaha/aviation-accident-database-synopses)) was taken from the National Transportation Safety Board that includes:
@@ -70,12 +70,11 @@ Based on this requirement we checked ([top aircraft manufacturers](https://www.a
 foundout that Airbus industries has less amount of accident record. As a result we recommended the following model for commercial airlines.
   - Make: Airbus
   - Number of Engines: 4.0
-
+  - Advanced landing assistance features
 ### For Private Airplanes
 We did the same analysis for private airlines and recommended the following model. Here are the ([top 10 private airplanes](https://www.aerotime.aero/articles/top-10-most-popular-private-jet-models-of-2023))
-  - Make: Make: Gulfstream Aerospace
+  - Make: Gulfstream Aerospace
   - Number of Engines: 2.0
-### Purchasing Recommendation For Both Airplanes:
   - Advanced landing assistance features
 
 ## Future Investigations
@@ -98,9 +97,9 @@ And also refer to our
 ```
 |— README.md                                                 <- The top-level README for reviewers of this project
 |— Aircraft_Purchasing_Decision_Analysis.ipynb               <- Interactive computing environment including analysis in Jupyter notebook
-|— .gitignore                                                <- gitignore
+|— .gitignore                                                <- gitignore exclude selected file execute
 |— Data                                                      <- Both sourced externally and generated from code
-|— Slide.pdf                                                 <- PDF version of project presentation
+|_ Slide.pdf                                                 <- PDF version of project presentation
 ```
 
 
