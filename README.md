@@ -14,6 +14,7 @@ Photo by ([Andres Bolkenbaas](https://blog.klm.com/6-tips-for-creative-aviation-
 ## Business Problem
 Jelly Co. is expanding it's business to new industries. They asked our team to look into the data for airplane accidents1 within the US in the last twenty-odd years. 
 The company wants to know:
+
   - Which airplane feature helps assess the lowest possible risk to the company?
   - Which airplane manufacturer should be purchased and operated for a commercial enterprise?
   - Which airplane manufacturer should be purchased and operated for a private enterprise?
@@ -42,21 +43,24 @@ After cleaning the data the master ([dataset](https://github.com/ermiyas-sidama/
 ## Data Analysis Result
 Our analysis shows that:
 
-      - Aircraft engine number is correlated to total accident record.
-      - Aircraft with a single engine has the highest accident record.
-      - Aircraft with recprocating type of engine has the highest accident.
-      - The most accidents occurred during the landing phase of flight.
+  - Aircraft engine number is correlated to total accident record.
+  - Aircraft with a single engine has the highest accident record.
+  - Aircraft with recprocating type of engine has the highest accident.
+  - The most accidents occurred during the landing phase of flight.
 ## Airplanes with a minimum of 2 engines had the least amount of accidents
 
-![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/4dcf86d3-0460-448b-912f-56d55f7f2e04)
+![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/2ddc59c9-a6d3-42c0-9e95-514b994fc383)
+
 
 ## Airplanes with the recprocating type of engine had the most amount of accidents
 
-![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/857f30f2-f43c-4e0f-9301-0a6dbf02bfd7)
+![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/afa7f1b6-1aff-4160-b9a9-a2e8238d107d)
+
 
 ## The most accidents occurred during the landing phase of flight
 
-![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/90768e02-b564-459f-94de-6f1004228c62)
+![image](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/assets/160514617/05b387cf-da15-4712-bfdd-45a81bd1c79c)
+
 
 
 ## Reccomendations
@@ -69,7 +73,6 @@ foundout that Airbus industries has less amount of accident record. As a result 
 
 ### For Private Airplanes
 We did the same analysis for private airlines and recommended the following model. Here are the ([top 10 private airplanes](https://www.aerotime.aero/articles/top-10-most-popular-private-jet-models-of-2023))
-
   - Make: Make: Gulfstream Aerospace
   - Number of Engines: 2.0
 ### Purchasing Recommendation For Both Airplanes:
@@ -77,24 +80,27 @@ We did the same analysis for private airlines and recommended the following mode
 
 ## Future Investigations
 
-- Understand Jelly Co.’s aircraft selection requirements (e.g., passenger capacity and minimum mileage) to provide model recommendations
-- Request financial data to conduct financial metric analysis to recommend the most cost effective airplane model 
-- Follow up with Jelly for any additional analysis to support the successful launch of the commercial and private/business airlines
+  - Understand Jelly Co.’s aircraft selection requirements (e.g., passenger capacity and minimum mileage) to provide model recommendations
+  - Request financial data to conduct financial metric analysis to recommend the most cost effective airplane model 
+  - Follow up with Jelly for any additional analysis to support the successful launch of the commercial and private/business airlines
 
 ## For More Information
-Please review our full analysis in jupyter notebook ([Aircraft_Purchasing_Decision_Analysis](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/blob/main/Aircraft_Purchasing_Decision_Analysis.ipynb))
+Please review our full analysis in jupyter notebook ([Aircraft_Purchasing_Decision_Analysis](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/blob/main/Aircraft_Purchasing_Decision_Analysis.ipynb))\
 And also refer to our 
 - ([Presentation](https://docs.google.com/presentation/d/1jL-KFUmxIiucP_slylAH3MVa7dCOrDrfDK0MjUmDY54/edit#slide=id.p)) 
 - Tableau Dash board ([Tableau Private Airline](https://public.tableau.com/app/profile/sangwon.shim/viz/AircraftManufacturerSelectionDashboardforPrivateAirline/AircraftSelection-Private?publish=yes))
                    ([Tableau Commercial Airlines](https://public.tableau.com/app/profile/sangwon.shim/viz/AircraftManufacturerSelectionDashboardforCommercialAirline/AircraftSelection-Commercial?publish=yes))
-  
+## Contributors
+([Ermiyas Sidama](https://github.com/ermiyas-sidama))
+([Karina Baculima](https://github.com/karisteph ))
+([Sangwon Shim](https://github.com/sangwon224 )) 
 ## Repository Structure
 ```
-|— README.md
-|— Aircraft_Purchasing_Decision_Analysis.ipynb
-|— .gitignore
-|— Data
-|— Presentation_slide.pdf
+|— README.md                                                 <- The top-level README for reviewers of this project
+|— Aircraft_Purchasing_Decision_Analysis.ipynb               <- Interactive computing environment including analysis in Jupyter notebook
+|— .gitignore                                                <- gitignore
+|— Data                                                      <- Both sourced externally and generated from code
+|— Slide.pdf                                                 <- PDF version of project presentation
 ```
 
 
