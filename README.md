@@ -84,7 +84,7 @@ We did the same analysis for private airlines and recommended the following mode
 ## For More Information
 Please review our full analysis in jupyter notebook ([Aircraft_Purchasing_Decision_Analysis](https://github.com/ermiyas-sidama/Aircraft_Risk_Analysis/blob/main/Aircraft_Purchasing_Decision_Analysis.ipynb))
 And also refer to our 
-- ([Presentation](https://docs.google.com/presentation/d/1jL-KFUmxIiucP_slylAH3MVa7dCOrDrfDK0MjUmDY54/edit#slide=id.g2c02bb49743_0_21)) 
+- ([Presentation](https://docs.google.com/presentation/d/1jL-KFUmxIiucP_slylAH3MVa7dCOrDrfDK0MjUmDY54/edit#slide=id.p)) 
 - Tableau Dash board ([Tableau Private Airline](https://public.tableau.com/app/profile/sangwon.shim/viz/AircraftManufacturerSelectionDashboardforPrivateAirline/AircraftSelection-Private?publish=yes))
                    ([Tableau Commercial Airlines](https://public.tableau.com/app/profile/sangwon.shim/viz/AircraftManufacturerSelectionDashboardforCommercialAirline/AircraftSelection-Commercial?publish=yes))
   
