@@ -99,7 +99,9 @@ And also refer to our
 |— Aircraft_Purchasing_Decision_Analysis.ipynb               <- Interactive computing environment including analysis in Jupyter notebook
 |— .gitignore                                                <- gitignore exclude selected file execute
 |— Data                                                      <- Both sourced externally and generated from code
-|_ Slide.pdf                                                 <- PDF version of project presentation
+    |— Aviation_Data.csv                                     <- Raw data
+    |— Aviation_Data_Cleaned.csv                             <- Cleaned data
+|_ Presentation.pdf                                          <- PDF version of project presentation
 ```
 
 
