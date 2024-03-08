@@ -101,7 +101,7 @@ And also refer to our
 |— Data                                                      <- Both sourced externally and generated from code
     |— Aviation_Data.csv                                     <- Raw data
     |— Aviation_Data_Cleaned.csv                             <- Cleaned data
-|_ Presentation.pdf                                          <- PDF version of project presentation
+|_ presentation.pdf                                          <- PDF version of project presentation
 ```
 
 
